@@ -32,17 +32,18 @@ appAngular.controller("mainController", function($scope, $http){
                 console.log(response.data);
                 message = "There are " + response.data.length + " invoices."
                 $scope.invoices = response.data; 
-                $scope.isLoggedIn = isLoggedIn;
+                
                 $scope.message = message;
                 console.log("finished getting isLoggedIn");
             }, function(response){
                 message = "error getting invoices : " + response;
                 console.log(message);
-                $scope.isLoggedIn = isLoggedIn;
+                
                 $scope.invoices = [];
                 $scope.message = message;
             })      
         }
+        $scope.isLoggedIn = isLoggedIn;
     },function(response){
         message = "Signin failed: " + response; 
         $scope.isLoggedIn = false;

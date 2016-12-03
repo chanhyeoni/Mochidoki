@@ -1,11 +1,9 @@
 {
   "name": "Mochidoki",
   "version": "1.0.0",
-<<<<<<< HEAD
   "description": "A internal tool for invoice management",
-=======
+
   "description": "A internal tool for Mochidoki workers to manage orders",
->>>>>>> 811f094a551f263c35fd8540547d72c54b212d5e
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,22 +11,14 @@
   },
   "repository": {
     "type": "git",
-<<<<<<< HEAD
     "url": "https://github.com/chanhyeoni/Mochidoki"
-=======
-    "url": "https://github.com/chanhyeoni/mochidoki"
->>>>>>> 811f094a551f263c35fd8540547d72c54b212d5e
   },
   "keywords": [
     "MEAN",
     "Express",
     "Angular"
   ],
-<<<<<<< HEAD
   "author": "Dong Ha Lee, Chang Hyun Lee",
-=======
-  "author": "Dong Ha Lee, Chang Hyun Lee"
->>>>>>> 811f094a551f263c35fd8540547d72c54b212d5e
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.13.3",

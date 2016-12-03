@@ -22,19 +22,12 @@ app.use(session({secret: 'ssshhhhh'}));
 // Create a database variable outside of the database connection callback to reuse the connection pool in your app.
 var db;
 
-<<<<<<< HEAD
+
 var MONGODB_URI = "mongodb://heroku_155d3r3c:375pu0ssddrdqaor9k7letgets@ds033116.mlab.com:33116/heroku_155d3r3c";
 
 // Connect to the database before starting the application server. 
 mongodb.MongoClient.connect(MONGODB_URI, function (err, database) {
-=======
-
-
-
-// Connect to the database before starting the application server. 
-mongodb.MongoClient.connect(process.env.MONGODB_URI, function (err, database) {
-  
->>>>>>> 811f094a551f263c35fd8540547d72c54b212d5e
+  debugger;
   if (err) {
     console.log(err);
     process.exit(1);
@@ -86,7 +79,8 @@ app.post("/login", function(req, res){
     if (userInformation){      
 
       req.session.email = userInformation.email;
-      req.session.isLoggedIn = true;   
+      req.session.isLoggedIn = true; 
+        
       db.collection(INVOICES).find({}).toArray(function(err, docs) {
         if (err) {
           console.log("error in getting invoices from login!");
