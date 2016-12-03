@@ -1,0 +1,45 @@
+
+<div>{{message}}</div>
+
+<div ng-if="isLoggedIn == true">
+    <nav id="topnav">
+      <ul class="topnav" id="myTopnav">
+        <li>Dashboard</li>
+        <li>Order</li>
+        <li><a href="https://mochidoki.com">Website</a></li>
+        <li>Preferences</li>
+        <button id='btnLogout' class='btn btn-action'>Log Out</button>
+        <!-- <script src='dashboard.js'></script> -->
+      </ul>
+    </nav>
+
+	<h1>Dashboard</h1>
+	<table>
+	    <thead>
+	        <tr>
+	            <th>Organization</th>
+	            <th>Shipping Location</th>
+	            <th>Date Ordered</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	      <tr ng-repeat="invoice in invoices | orderBy:'invoice.dateOrderd'" style="cursor:pointer">
+	        <td><a ng-href="#/invoice/{{invoice._id}}">{{ invoice.orgName }}</a></td>
+	        <td>{{ invoice.shipLocation }}</td>
+	        <td>{{ invoice.dateOrdered }}</td>
+	      </tr>
+	    </tbody>	    
+	</table>    
+</div>
+
+<div ng-if="isLoggedIn == false">
+	<div ng-controller="loginController">
+		<img src="/logo.png" id="logo">
+		<form novalidate class="simple-form" ng-submit="submit()">
+			<input id='txtEmail' type ='email' placeholder='example@mail.com' ng-model='email'>
+			<input id='txtPassword' type = 'password' placeholder="password" ng-model='password'> 
+			<button id='btnLogin' class='btn btn-action'>Log in</button>
+		</form>
+		<p class='message'>Not registered? <a href="https://mochidoki.com/index.php/contacts">Ask for account!</a></p>	
+	</div>
+</div>

@@ -1,0 +1,8 @@
+{
+  "name": "Mochidoki Internal Invoice Management Application",
+  "description": "A MEAN app that allows users to manage invoices.",
+  "repository": "hhttps://github.com/chanhyeoni/Mochidoki",
+  // "logo": "https://mlab.com/company/brand/resources/mLab-logo-onlight.png",
+  "keywords": ["node", "express", "angular", "MEAN", "mongodb", "REST", "API"],
+  "addons": ["mongolab"]
+}
